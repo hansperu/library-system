@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 fastapi = "*"
 uvicorn = "*"
+sqlmodel = "*"
+mysqlclient = "*"
 
 [dev-packages]
 
