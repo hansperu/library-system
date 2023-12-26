@@ -8,6 +8,7 @@ fastapi = "*"
 uvicorn = "*"
 sqlmodel = "*"
 mysqlclient = "*"
+alembic = "*"
 
 [dev-packages]
 
