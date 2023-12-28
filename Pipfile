@@ -9,6 +9,9 @@ uvicorn = "*"
 sqlmodel = "*"
 mysqlclient = "*"
 alembic = "*"
+pydantic-settings = "*"
+pymysql = "*"
+cryptography = "*"
 
 [dev-packages]
 
