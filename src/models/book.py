@@ -1,4 +1,6 @@
-from sqlmodel import SQLModel, Field
+from typing import Optional
+from sqlmodel import Relationship, SQLModel, Field
+
 
 
 class BookBase(SQLModel):
@@ -6,7 +8,8 @@ class BookBase(SQLModel):
     author: str = Field(min_length=3, max_length=100)
 
 class Book(BookBase, table=True):
-    id: int = Field(default=None, primary_key=True)
+    id: Optional[int] = Field(default=None, primary_key=True)
+    borrows: list["Borrow"] = Relationship(back_populates="book")
 
 
 class BookCreate(BookBase):
