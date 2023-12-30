@@ -2,7 +2,7 @@ import type { Config } from 'tailwindcss'
 import daisyui from 'daisyui';
 
 export default {
-  content: ["./src/**/*.{ts,tsx, html}"],
+  content: ['./index.html', './src/pages/**/*.{ts,tsx}', './src/components/**/*.{ts,tsx}'],
   theme: {
     extend: {
       fontFamily: {
@@ -10,11 +10,9 @@ export default {
       },
     },
   },
-  plugins: [
-    daisyui
-  ],
+  plugins: [daisyui],
   daisyui: {
-    themes: ["acid", "winter"]
+    themes: ["winter", "night"]
   }
-} satisfies Config
+} as Config
 
