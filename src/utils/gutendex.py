@@ -36,11 +36,12 @@ async def list_of_books() -> list[BookCreate]:
 
             if not book.get("authors"):
                 continue
+            portrait: str = book.get("formats").get("image/jpeg")
 
             title = book.get("title")
             author = book.get("authors")[0].get("name")
 
-            books.append(BookCreate(title=title, author=author))
+            books.append(BookCreate(title=title, author=author, portrait=portrait))
 
 
         if not response.json().get("next"):
