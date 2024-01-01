@@ -2,6 +2,13 @@
 
 > A simple replica of a library system.
 
+## Preview web
+<img width="1470" alt="Captura de pantalla 2024-01-01 a las 18 12 27" src="https://github.com/hansperu/library-system/assets/60121637/b60311bd-f90b-4987-91ea-2ed62880e85a">
+<img width="1470" alt="Captura de pantalla 2024-01-01 a las 18 13 03" src="https://github.com/hansperu/library-system/assets/60121637/a87690d8-0020-48b1-948a-f5e69128997f">
+<img width="1470" alt="Captura de pantalla 2024-01-01 a las 18 13 30" src="https://github.com/hansperu/library-system/assets/60121637/e4260779-63d4-4646-a833-bcd53124e3ea">
+<img width="1470" alt="Captura de pantalla 2024-01-01 a las 18 13 46" src="https://github.com/hansperu/library-system/assets/60121637/5bdfdcf1-e8e6-4ef7-992e-9df029689700">
+
+
 ## TODO
 
 - [ ] Make it more robust with proper error handling
