@@ -32,9 +32,11 @@ async def bulk_create_books() -> None:
 
 app = FastAPI(lifespan=lifespan)
 
+origins = ["*", "http://web:3000", "http://localhost:3000", "http://localhost:3000/", "http://127.0.0.1:3000", "http://127.0.0.1:3000/", "http://127.0.0.1:8000", "http://web:80/"]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins="*",
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -44,5 +46,3 @@ app.add_middleware(
 
 app.include_router(books_router, prefix="/books", tags=["books"])
 app.include_router(users_router, prefix="/users", tags=["users"])
-
-
