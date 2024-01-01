@@ -21,6 +21,7 @@ services:
       - '80:80'
     env_file:
       - .env
+      - .env.example
 
   mysql:
     image: mysql:8
@@ -30,5 +31,6 @@ services:
 
     env_file:
       - .env
+      - .env.example
     ports:
       - '3306:3306'
