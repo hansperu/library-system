@@ -1,12 +1,23 @@
 version: '3.8'
 services:
-  db:
+  api:
+    build:
+      context: .
+      dockerfile: ./compose/api/Dockerfile
+    image: library-api
+    container_name: library-api
+    ports:
+      - '80:80'
+    env_file:
+      - .env
+
+  mysql:
     image: mysql:8
     restart: always
     environment:
-      - MYSQL_DATABASE=library
-      - MYSQL_USER=manager
-      - MYSQL_PASSWORD=manager
       - MYSQL_ROOT_PASSWORD=root
+
+    env_file:
+      - .env
     ports:
       - '3306:3306'
