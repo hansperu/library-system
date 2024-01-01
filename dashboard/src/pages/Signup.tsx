@@ -80,7 +80,7 @@ export const Signup: Component = () => {
                                 <input type="address" placeholder="address" class="input input-bordered" onInput={(e) => setAddress(e.currentTarget.value)} required />
                             </div>
                             <div class="form-control mt-6">
-                                <button class="btn btn-primary" onClick={() => setConfirm(true)}>Sign up</button>
+                                <button type="button" class="btn btn-primary" onClick={() => setConfirm(true)}>Sign up</button>
                             </div>
                         </form>
                     </div>

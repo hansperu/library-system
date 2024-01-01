@@ -9,7 +9,8 @@ export const signup = async (email: string, password: string, firstName: string,
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ email, password, firstName, lastName, age, address })
+        body: JSON.stringify({ email, password,
+             "first_name": firstName, "last_name": lastName, age, address })
     })
     if (!response.ok) {
         throw new Error(response.statusText)
