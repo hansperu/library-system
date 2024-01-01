@@ -8,6 +8,9 @@
 <img width="1470" alt="Captura de pantalla 2024-01-01 a las 18 13 30" src="https://github.com/hansperu/library-system/assets/60121637/e4260779-63d4-4646-a833-bcd53124e3ea">
 <img width="1470" alt="Captura de pantalla 2024-01-01 a las 18 13 46" src="https://github.com/hansperu/library-system/assets/60121637/5bdfdcf1-e8e6-4ef7-992e-9df029689700">
 
+## Preview API Documentation
+<img width="1470" alt="Captura de pantalla 2024-01-01 a las 18 17 25" src="https://github.com/hansperu/library-system/assets/60121637/42b7cd34-5750-473b-a134-9ba511fa5730">
+<img width="1470" alt="Captura de pantalla 2024-01-01 a las 18 17 37" src="https://github.com/hansperu/library-system/assets/60121637/6df6744b-fab6-4206-b5e7-5721532f72a0">
 
 ## TODO
 
