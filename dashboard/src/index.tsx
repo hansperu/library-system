@@ -5,6 +5,7 @@ import { Home } from './pages/Home'
 import { Login } from './pages/Login'
 import { NotFound } from './pages/NotFound'
 import { Signup } from './pages/Signup'
+import {Dashboard} from "./pages/Dashboard";
 
 import './index.css'
 
@@ -17,5 +18,6 @@ render(() => (
         <Route path="/signup" component={Signup}/>
         {/* <Route path={"/user/:id"} component={User}/> */}
         <Route path="*404" component={NotFound}/>
+        <Route path="/dashboard" component={Dashboard}/>
     </Router>
 ), root!)
