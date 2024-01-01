@@ -1,0 +1,8 @@
+#!/bin/bash
+# start.sh
+
+# Run Alembic Upgrade
+alembic upgrade head
+
+# Start your main application (e.g., a FastAPI server)
+uvicorn main:app --host 0.0.0.0 --port 80
