@@ -45,6 +45,14 @@ docker compose down
 #
 ```
 
+## Post installation
+You have to check the ports after installation and deployment with docker on the following ports:
+
+- http://localhost:3000 for the web client
+- http://localhost:80/docs for API documentation
+- http://localhost:80/redoc for another version of the API documentation
+- http://localhost:3306 for connection to the mysql database
+
 ## API design
 For your Book Tracking/Library System RESTful API, here are the proposed endpoints, structured to handle various functionalities:
 
