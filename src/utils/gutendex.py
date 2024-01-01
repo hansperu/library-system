@@ -2,23 +2,6 @@ import httpx
 
 from src.models.book import BookCreate
 
-# {
-#   "id": <number of Project Gutenberg ID>,
-#   "title": <string>,
-#   "subjects": <array of strings>,
-#   "authors": <array of Persons>,
-#   "translators": <array of Persons>,
-#   "bookshelves": <array of strings>,
-#   "languages": <array of strings>,
-#   "copyright": <boolean or null>,
-#   "media_type": <string>,
-#   "formats": <Format>,
-#   "download_count": <number>
-# }
-# https://gutendex.com/
-
-
-
 async def list_of_books() -> list[BookCreate]:
     async with httpx.AsyncClient() as client:
         response = await client.get("https://gutendex.com/books/")
@@ -66,10 +49,9 @@ async def list_of_books() -> list[BookCreate]:
 
             title = book.get("title")
             author = book.get("authors")[0].get("name")
+            portrait: str = book.get("formats").get("image/jpeg")
 
-            books.append(BookCreate(title=title, author=author))
+            books.append(BookCreate(title=title, author=author, portrait=portrait))
 
 
         return books
-
-
