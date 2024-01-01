@@ -1,5 +1,16 @@
 version: '3.8'
 services:
+  web:
+    build:
+      context: .
+      dockerfile: ./compose/web/Dockerfile
+    image: library-web
+    container_name: library-web
+    ports:
+      - '3000:3000'
+    env_file:
+      - .env.web
+
   api:
     build:
       context: .
