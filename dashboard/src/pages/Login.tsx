@@ -16,17 +16,12 @@ export const Login: Component = () => {
 
     createMemo(() => {
         if (showConfirm()) {
-            try {
-                const token = login(showEmail(), showPassword())
-                if (token) {
+                login(showEmail(), showPassword()).then((token: string) => {
                     localStorage.setItem("token", token)
                     setConfirm(false)
                     setError("")
                     navigateDashboard("/dashboard")
-                }
-            } catch (error: any) {
-                setError(error.message) 
-            }
+                }).catch((error: any) => setError(error.message))
         }
     })
     return (
@@ -65,7 +60,7 @@ export const Login: Component = () => {
                                 </label>
                             </div>
                             <div class="form-control mt-6">
-                                <button class="btn btn-primary" onClick={() => setConfirm(true)}>Login</button>
+                                <button type="button" class="btn btn-primary" onClick={() => setConfirm(true)}>Login</button>
                             </div>
                         </form>
                     </div>

@@ -9,7 +9,10 @@ export async function login(email: string, password: string) {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ email, password })
+        body: JSON.stringify({ 
+            "email": email, 
+            "password": password 
+        })
     })
     if (!response.ok) {
         throw new Error(response.statusText)
@@ -17,5 +20,5 @@ export async function login(email: string, password: string) {
 
     const data = await response.json()
 
-    return data.token
+    return data
 }
